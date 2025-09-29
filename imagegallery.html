@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="gallerystyle.css">
+</head>
+
+<body>
+    <header id="top" class="topbar ">
+        <h2 class="title">Photo Gallery</h2>
+        <nav>
+            <div class="navbar">
+                <a href="#top">Home</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+            </div>
+            
+        </nav>
+        <button id="themes"><img src="icons/theme.png" alt=""></button>
+    </header>
+
+    <section id="gallery" class="imageform">
+        <div class="grid">
+            <img src="images/images (1).jpeg" alt="">
+            <img src="images/free-nature-images.jpg" alt="">
+            <img src="images/nature-wallpaper.jpg" alt="">
+            <img src="images/nature.webp" alt="">
+            <img src="images/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.webp"
+                alt="">
+            <img src="images/nature landscapes and sunrise.webp" alt="">
+            <img src="images/3d-wallpaper.png" alt="">
+            <img src="images/ai-generated-beautiful-sunset-over-the-lake-with-tree-silhouette-natural-background-photo.jpg"
+                alt="">
+            <img src="images/images (2).jpeg" alt="">
+        </div>
+    </section>
+    <footer id="contact">
+        <h2>Contact Us :</h2>
+        <p style="color: gray;">+91 9843423875</p>
+        <div>
+            <a href="https://x.com/" target="_blank"><img src="icons/twitter.png" class="lo" alt=""></a>
+            <a href="https://www.facebook.com/" target="_blank"><img src="icons/facebook.png" class="log" alt=""></a>
+            <a href="https://www.instagram.com/nature/?hl=en" target="_blank"><img class="logo"
+                    src="icons/instagram (2).png"></a>
+        </div>
+        <p>Copyright &copy; Photo Gallery - 2025. All rights reserved.</p>
+    </footer>
+    
+    <script>
+
+        const bodyy = document.querySelector("body")
+        const themebtn = document.getElementById("themes")
+        if(localStorage.getItem("theme") === "dark"){
+            bodyy.classList.add("dark-theme")
+        }
+        themebtn.addEventListener("click", ()=> {
+            bodyy.classList.toggle("dark-theme")
+        })
+        if(bodyy.classList.contains("dark-theme")){
+            localStorage.setItem("theme","dark")
+        }
+        else{
+            localStorage.setItem("theme","light")
+        }
+
+    </script>
+</body>
+
+</html>
