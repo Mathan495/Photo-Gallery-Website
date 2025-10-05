@@ -1,72 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Gallery</title>
-    <link rel="stylesheet" href="gallerystyle.css">
-</head>
-
-<body>
-    <header id="top" class="topbar ">
-        <h2 class="title">Photo Gallery</h2>
-        <nav>
-            <div class="navbar">
-                <a href="#top">Home</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#contact">Contact</a>
-            </div>
-            
-        </nav>
-        <button id="themes"><img src="icons/theme.png" alt=""></button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Full‑Stack Developer Path</title>
+    <link rel="stylesheet" href="gallerystyle.css" />
+  </head>
+  <body>
+    <header id="top" class="topbar">
+      <h1 class="brand title">DevPath</h1>
+      <nav aria-label="Primary">
+        <div class="navbar">
+          <a href="#home">Home</a>
+          <a href="#tracks">Tracks</a>
+          <a href="#curriculum">Curriculum</a>
+          <a href="#projects">Projects</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+      <button id="themes" aria-label="Toggle theme">
+        <img src="icons/theme.png" alt="Toggle theme" />
+      </button>
     </header>
 
-    <section id="gallery" class="imageform">
-        <div class="grid">
-            <img src="images/images (1).jpeg" alt="">
-            <img src="images/free-nature-images.jpg" alt="">
-            <img src="images/nature-wallpaper.jpg" alt="">
-            <img src="images/nature.webp" alt="">
-            <img src="images/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.webp"
-                alt="">
-            <img src="images/nature landscapes and sunrise.webp" alt="">
-            <img src="images/3d-wallpaper.png" alt="">
-            <img src="images/ai-generated-beautiful-sunset-over-the-lake-with-tree-silhouette-natural-background-photo.jpg"
-                alt="">
-            <img src="images/images (2).jpeg" alt="">
+    <main>
+      <!-- Hero -->
+      <section id="home" class="hero">
+        <div class="hero-inner">
+          <h2 class="hero-title reveal">Become a Full‑Stack Developer</h2>
+          <p class="hero-subtitle reveal">
+            Intermediate, project‑based learning with animations and progress tracking.
+          </p>
+          <div class="cta reveal">
+            <a class="btn primary" href="#tracks">Start Learning</a>
+            <a class="btn secondary" href="#curriculum">View Curriculum</a>
+          </div>
+          <div class="stats reveal">
+            <div class="stat"><strong>6</strong><span>Projects</span></div>
+            <div class="stat"><strong>12</strong><span>Modules</span></div>
+            <div class="stat"><strong>100+</strong><span>Exercises</span></div>
+          </div>
         </div>
-    </section>
-    <footer id="contact">
-        <h2>Contact Us :</h2>
-        <p style="color: gray;">+91 9843423875</p>
+      </section>
+
+      <!-- Tracks -->
+      <section id="tracks" class="section">
+        <h2 class="section-title reveal">Learning Tracks</h2>
+        <div class="cards">
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">🎨</div>
+            <h3>Frontend</h3>
+            <p>Semantic HTML, responsive CSS, modern JavaScript, React basics, accessibility.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">⚙️</div>
+            <h3>Backend</h3>
+            <p>Node.js, Express, REST APIs, validation, error handling, testing.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">🗄️</div>
+            <h3>Databases</h3>
+            <p>PostgreSQL, schema design, joins, indexing, ORMs, migrations; MongoDB alternative.</p>
+          </article>
+          <article class="card reveal">
+            <div class="card-icon" aria-hidden="true">🚀</div>
+            <h3>DevOps</h3>
+            <p>Git & GitHub, CI workflows, Docker basics, deploy to cloud providers.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Curriculum with progress -->
+      <section id="curriculum" class="section">
+        <h2 class="section-title reveal">Curriculum</h2>
+        <div class="progress-wrap reveal">
+          <div class="progress-bar"><div id="progressFill" class="progress-fill"></div></div>
+          <div class="progress-label"><span id="progressPercent">0%</span> completed</div>
+        </div>
+        <div class="accordion">
+          <details class="module reveal" open>
+            <summary>
+              <span>Module 1: Web Foundations</span>
+              <span class="pill">Frontend</span>
+            </summary>
+            <ul>
+              <li><label><input type="checkbox" data-task="m1-1" /> Semantic HTML and forms</label></li>
+              <li><label><input type="checkbox" data-task="m1-2" /> CSS layout (Flexbox, Grid)</label></li>
+              <li><label><input type="checkbox" data-task="m1-3" /> Modern JS syntax (ES6+)</label></li>
+            </ul>
+          </details>
+
+          <details class="module reveal">
+            <summary>
+              <span>Module 2: Client Apps with React</span>
+              <span class="pill">Frontend</span>
+            </summary>
+            <ul>
+              <li><label><input type="checkbox" data-task="m2-1" /> Components, props, state</label></li>
+              <li><label><input type="checkbox" data-task="m2-2" /> Hooks and effects</label></li>
+              <li><label><input type="checkbox" data-task="m2-3" /> Fetching data and forms</label></li>
+            </ul>
+          </details>
+
+          <details class="module reveal">
+            <summary>
+              <span>Module 3: Backend with Node & Express</span>
+              <span class="pill">Backend</span>
+            </summary>
+            <ul>
+              <li><label><input type="checkbox" data-task="m3-1" /> Routing and controllers</label></li>
+              <li><label><input type="checkbox" data-task="m3-2" /> Middleware and validation</label></li>
+              <li><label><input type="checkbox" data-task="m3-3" /> Error handling and logging</label></li>
+            </ul>
+          </details>
+
+          <details class="module reveal">
+            <summary>
+              <span>Module 4: Databases</span>
+              <span class="pill">DB</span>
+            </summary>
+            <ul>
+              <li><label><input type="checkbox" data-task="m4-1" /> SQL: tables, keys, joins</label></li>
+              <li><label><input type="checkbox" data-task="m4-2" /> Query optimization & indexing</label></li>
+              <li><label><input type="checkbox" data-task="m4-3" /> ORM & migrations</label></li>
+            </ul>
+          </details>
+
+          <details class="module reveal">
+            <summary>
+              <span>Module 5: Auth & Security</span>
+              <span class="pill">Backend</span>
+            </summary>
+            <ul>
+              <li><label><input type="checkbox" data-task="m5-1" /> Passwords, hashing, sessions</label></li>
+              <li><label><input type="checkbox" data-task="m5-2" /> JWT & protected routes</label></li>
+              <li><label><input type="checkbox" data-task="m5-3" /> OWASP basics</label></li>
+            </ul>
+          </details>
+
+          <details class="module reveal">
+            <summary>
+              <span>Module 6: DevOps & Deployment</span>
+              <span class="pill">DevOps</span>
+            </summary>
+            <ul>
+              <li><label><input type="checkbox" data-task="m6-1" /> Git branching & PRs</label></li>
+              <li><label><input type="checkbox" data-task="m6-2" /> Docker & images</label></li>
+              <li><label><input type="checkbox" data-task="m6-3" /> CI & deployment</label></li>
+            </ul>
+          </details>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="section">
+        <h2 class="section-title reveal">Projects</h2>
+        <div class="cards projects">
+          <article class="card project reveal">
+            <h3>E‑commerce API</h3>
+            <p>REST API with authentication, CRUD, pagination, and Postgres.</p>
+            <ul class="chips"><li>Express</li><li>JWT</li><li>Postgres</li></ul>
+          </article>
+          <article class="card project reveal">
+            <h3>Full‑Stack Auth App</h3>
+            <p>React + Node with protected routes, sessions, and form validation.</p>
+            <ul class="chips"><li>React</li><li>Express</li><li>Session</li></ul>
+          </article>
+          <article class="card project reveal">
+            <h3>Real‑time Chat</h3>
+            <p>WebSocket chat with rooms, typing indicators, Dockerized deployment.</p>
+            <ul class="chips"><li>Socket.IO</li><li>Docker</li><li>CI</li></ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="section">
+        <h2 class="section-title reveal">FAQ</h2>
+        <div class="accordion faq">
+          <details class="reveal">
+            <summary>How long does it take?</summary>
+            <p>At an intermediate pace, 8–12 weeks part‑time.</p>
+          </details>
+          <details class="reveal">
+            <summary>Prerequisites?</summary>
+            <p>Comfortable with basic HTML/CSS/JS and Git fundamentals.</p>
+          </details>
+          <details class="reveal">
+            <summary>Do I need a backend server?</summary>
+            <p>You’ll build one with Node/Express and deploy it.</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <div class="footer-inner">
         <div>
-            <a href="https://x.com/" target="_blank"><img src="icons/twitter.png" class="lo" alt=""></a>
-            <a href="https://www.facebook.com/" target="_blank"><img src="icons/facebook.png" class="log" alt=""></a>
-            <a href="https://www.instagram.com/nature/?hl=en" target="_blank"><img class="logo"
-                    src="icons/instagram (2).png"></a>
+          <h3>Contact</h3>
+          <p class="muted">+91 9843423875</p>
         </div>
-        <p>Copyright &copy; Photo Gallery - 2025. All rights reserved.</p>
+        <div class="social">
+          <a href="https://x.com/" target="_blank" rel="noreferrer noopener"><img src="icons/twitter.png" class="lo" alt="Twitter" /></a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noreferrer noopener"><img src="icons/facebook.png" class="log" alt="Facebook" /></a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noreferrer noopener"><img class="logo" src="icons/instagram (2).png" alt="Instagram" /></a>
+        </div>
+      </div>
+      <p class="copyright">Copyright &copy; DevPath — 2025. All rights reserved.</p>
     </footer>
-    
+
     <script>
+      // Theme toggle with persistence
+      const body = document.body;
+      const themeButton = document.getElementById('themes');
+      const THEME_KEY = 'theme';
+      function applyTheme(theme) {
+        if (theme === 'dark') {
+          body.classList.add('dark-theme');
+        } else {
+          body.classList.remove('dark-theme');
+        }
+      }
+      applyTheme(localStorage.getItem(THEME_KEY) || 'light');
+      themeButton.addEventListener('click', () => {
+        const nowDark = body.classList.toggle('dark-theme');
+        localStorage.setItem(THEME_KEY, nowDark ? 'dark' : 'light');
+      });
 
-        const bodyy = document.querySelector("body")
-        const themebtn = document.getElementById("themes")
-        if(localStorage.getItem("theme") === "dark"){
-            bodyy.classList.add("dark-theme")
-        }
-        themebtn.addEventListener("click", ()=> {
-            bodyy.classList.toggle("dark-theme")
-        })
-        if(bodyy.classList.contains("dark-theme")){
-            localStorage.setItem("theme","dark")
-        }
-        else{
-            localStorage.setItem("theme","light")
-        }
+      // Scroll reveal animations
+      const revealables = document.querySelectorAll('.reveal, .card');
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in');
+              io.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+      revealables.forEach((el) => io.observe(el));
 
+      // Curriculum progress persistence
+      const TASK_KEY_PREFIX = 'task:';
+      const checkboxes = Array.from(
+        document.querySelectorAll('input[type="checkbox"][data-task]')
+      );
+      function restoreTasks() {
+        checkboxes.forEach((cb) => {
+          const key = TASK_KEY_PREFIX + cb.dataset.task;
+          cb.checked = localStorage.getItem(key) === '1';
+        });
+      }
+      function saveTask(cb) {
+        const key = TASK_KEY_PREFIX + cb.dataset.task;
+        localStorage.setItem(key, cb.checked ? '1' : '0');
+      }
+      function updateProgress() {
+        const total = checkboxes.length;
+        const completed = checkboxes.filter((cb) => cb.checked).length;
+        const percent = total ? Math.round((completed / total) * 100) : 0;
+        const fill = document.getElementById('progressFill');
+        const label = document.getElementById('progressPercent');
+        if (fill) fill.style.width = percent + '%';
+        if (label) label.textContent = percent + '%';
+      }
+      restoreTasks();
+      updateProgress();
+      checkboxes.forEach((cb) => {
+        cb.addEventListener('change', () => {
+          saveTask(cb);
+          updateProgress();
+        });
+      });
     </script>
-</body>
-
+  </body>
 </html>
